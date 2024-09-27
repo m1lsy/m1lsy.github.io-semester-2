@@ -1,18 +1,136 @@
-* {
-    padding: 0;margin: 0;box-sizing: border-box;font-family: Arial, Helvetica, sans-serif;
+*{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
 }
-body {
-    background-color: rgb(137, 203, 172);
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(243, 240, 240);
+    padding: 15px;
 }
 
 h1 {
-    color: beige;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+    font-size: 24px;
 }
 
-#counter {
+h2 {
+    color: white;
+    font-size: 60px;
+    padding-top: 150px;
+    padding-left: 20px;
+}
+
+h3 {
+    color: rgb(67, 67, 67);
+    font-size: 30px;
+    text-align: center;
+    padding: 30px;
+}
+
+p {
+    font-size: 16px;
+    padding: 30px;
+}
+
+ul {
+    display: flex;
+}
+
+li {
+    padding: 10px;
+    list-style: none;
+}
+
+li a {
+    text-decoration: none;
     color: black;
+    font-size: 15px;
+}
+
+button {
+    background-color: transparent;
+    box-shadow: none;
+    border: 3px solid white;
+    color: white;
+    padding: 10px;
+    margin-left: 30px;
+}
+.icons {
+    color: rgb(52, 52, 52);
+}
+
+#mountain-image {
+    background-image: url(mountainpic.jpg);
+    background-size: cover;
+    height: 600px;
+    -webkit-filter: grayscale(100%); 
+    filter: grayscale(100%);
+}
+
+.about-us {
+    background-color: rgb(243, 240, 240);
+}
+
+.textbox-1 {
+    color: white;
+    width: 400px;
+}
+
+.textbox-2 {
+    width: 800px;
+    color: black;
+    text-align: center;
+    margin: auto;
+}
+
+.image-container {
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    gap: 0;
+}
+
+.image-container img {
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+    width: 400px;
+    height: 200px;
+    object-fit: cover;
+}
+
+.testimonial-container {
+    display: flex;
+    justify-content: space-evenly;
+    padding-top: 30px;
+}
+
+.testimonial-container img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+
+}
+.testimonial-person {
+    text-align: center;
+    width: 300px;
+}
+
+figcaption {
+    padding-top: 50px;
+    font-size: 14px;
+
+}
+
+figcaption h4 {
+    font-size: 20px;
+    font-weight: 600;
+    padding-bottom: 100px;
+}
+
+footer {
+    background-color: rgb(243, 240, 240);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 20px;
 }
