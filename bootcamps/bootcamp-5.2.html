@@ -1,0 +1,72 @@
+<div class="shapes">
+    <div class="circle"></div>
+    <div class="cross rec-1"></div>
+    <div class="cross rec-2"></div>
+  </div>
+  <style>
+    body {
+      background: #6592CF;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+    .shapes {
+      position: relative;
+      animation-name: spin;
+      animation: spin 3000ms infinite linear;
+    }
+    .circle {
+      width: 200px;
+      height: 200px;
+      background: #6592CF;
+      border-radius: 50%;
+      border: 20px solid #F7CB71;
+    }
+    .circle:hover {
+        animation: grow 3000ms backwards;
+    }
+    .cross {
+      width: 50px;
+      height: 180px;
+      border-radius: 50%;
+      background-color: #F7CB71;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      animation-name: color-change;
+      animation-duration: 4000ms;
+      animation-iteration-count: infinite;
+    }
+
+    @keyframes grow {
+        from {
+            width: 200px;height:200px;
+        }
+        to {
+            width: 400px;height:200px;
+        }
+    }
+    @keyframes spin{
+        from {
+            transform: rotate(0deg);
+        }
+        to {
+            transform: rotate(360deg);
+        }
+    }
+    @keyframes color-change {
+        from {
+            background-color: #F7CB71;
+        }
+        to {
+            background-color: hsl(289, 76%, 77%);
+        }
+    }
+    .rec-2 {
+      transform: translate(-50%, -50%) rotate(90deg)
+    }
+  </style>
+  
