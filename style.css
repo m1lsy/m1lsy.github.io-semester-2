@@ -1,0 +1,51 @@
+/* Reset styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: polysans;
+}
+
+/* Grid Container */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr); /* 8 columns */
+    gap: 40px; /* 40px gutter */
+    padding: 0 25px; 
+    max-width: 1200px; 
+    margin: 0 auto; /* Center the content */
+}
+
+/* Grid Items */
+.project-info, .client-info {
+    line-height: 1.6;
+}
+
+/* Text Styling */
+.project-info h1, .client-info h2 {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.project-info h3, .client-info h3 {
+    font-size: 0.9rem;
+    font-weight: bold;
+    margin-top: 1rem;
+}
+
+.project-info p, .client-info p, .client-info ul {
+    font-size: 1rem;
+    margin-top: 0.5rem;
+}
+
+.client-info ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.client-info ul li {
+    margin-bottom: 0.3rem;
+}
