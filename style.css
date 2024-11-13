@@ -7,9 +7,33 @@
 
 body {
     font-family: polysans;
+    background-color: #FAF8F0;
+    cursor: none;
 }
 
-/* Grid Container */
+button {
+    background-color: #E1F673;
+    border: none;
+    width: 315px;
+    padding: 10px;
+    padding-left: 30px ;
+    margin-top: 20px;
+    border-radius: 50px;
+    text-align: left;
+}
+button .arrow {
+    margin-left: 150px; 
+}
+.circle-cursor {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: #212ae7; 
+    border-radius: 50%; 
+    pointer-events: none; 
+    transform: translate(-50%, -50%); 
+    transition: width 0.1s ease, height 0.1s ease; 
+}
 /* Grid Container */
 .grid-container {
     display: grid;
@@ -23,45 +47,58 @@ body {
 
 /* Grid Items */
 .project-title {
-    grid-column: 1 / span 4; /* Start in column 1, span across 4 columns */
-    grid-row: 1; /* Row 1 */
+    grid-column: 2 / span 4; /* Start in column 2, go across 4 columns */
+    grid-row: 2; 
 }
 
 .client-title {
-    grid-column: 5 / span 4; /* Start in column 5, span across 4 columns */
-    grid-row: 1; /* Row 1 */
+    grid-column: 6 / span 4; 
+    grid-row: 3; 
 }
 
 .project-overview {
-    grid-column: 1 / span 4; /* Start in column 1, span across 4 columns */
-    grid-row: 2; /* Row 2 */
+    grid-column: 2 / span 3; 
+    grid-row: 5; 
 }
 
 .skills-used {
-    grid-column: 5 / span 2; /* Start in column 5, span across 2 columns */
-    grid-row: 2; /* Row 2 */
+    grid-column: 6 / span 2; 
+    grid-row: 5; 
 }
 
 .date {
-    grid-column: 7 / span 2; /* Start in column 7, span across 2 columns */
-    grid-row: 2; /* Row 2 */
+    grid-column: 8 / span 2; 
+    grid-row: 5; 
 }
+
+.aside-heading {
+    grid-column: 2 / span 2;
+    grid-row: 3;
+}
+
+.aside-text {
+    grid-column: 5 / span 4;
+    grid-row: 3;
+}
+
+
 
 /* Additional Styling */
 .project-title h1, .client-title h2 {
-    font-size: 2rem;
+    font-size: 2.5em;
     font-weight: bold;
     margin-bottom: 0.5rem;
 }
 
 .project-title p, .client-title p {
-    font-size: 1.2rem;
+    font-size: 2rem;
     margin-bottom: 1.5rem;
+    font-weight: 500;
 }
 
 .project-overview h3, .skills-used h3, .date h3 {
     font-size: 0.9rem;
-    font-weight: bold;
+    font-weight: 600;
     margin-bottom: 0.5rem;
 }
 
@@ -77,4 +114,15 @@ body {
 
 .skills-used ul li {
     margin-bottom: 0.3rem;
+}
+
+.aside-heading h1 {
+    text-transform: uppercase;
+    font-size: 1.2em;
+}
+
+.image-container img{
+    grid-column: 3 / span 3;
+    grid-row: 2;
+    border-radius: 10px;
 }
