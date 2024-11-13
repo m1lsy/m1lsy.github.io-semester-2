@@ -10,42 +10,71 @@ body {
 }
 
 /* Grid Container */
+/* Grid Container */
 .grid-container {
     display: grid;
     grid-template-columns: repeat(8, 1fr); /* 8 columns */
+    grid-auto-rows: minmax(100px, auto); /* Automatic row height */
     gap: 40px; /* 40px gutter */
-    padding: 0 25px; 
-    max-width: 1200px; 
-    margin: 0 auto; /* Center the content */
+    padding: 0 25px;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 /* Grid Items */
-.project-info, .client-info {
-    line-height: 1.6;
+.project-title {
+    grid-column: 1 / span 4; /* Start in column 1, span across 4 columns */
+    grid-row: 1; /* Row 1 */
 }
 
-/* Text Styling */
-.project-info h1, .client-info h2 {
+.client-title {
+    grid-column: 5 / span 4; /* Start in column 5, span across 4 columns */
+    grid-row: 1; /* Row 1 */
+}
+
+.project-overview {
+    grid-column: 1 / span 4; /* Start in column 1, span across 4 columns */
+    grid-row: 2; /* Row 2 */
+}
+
+.skills-used {
+    grid-column: 5 / span 2; /* Start in column 5, span across 2 columns */
+    grid-row: 2; /* Row 2 */
+}
+
+.date {
+    grid-column: 7 / span 2; /* Start in column 7, span across 2 columns */
+    grid-row: 2; /* Row 2 */
+}
+
+/* Additional Styling */
+.project-title h1, .client-title h2 {
     font-size: 2rem;
     font-weight: bold;
+    margin-bottom: 0.5rem;
 }
 
-.project-info h3, .client-info h3 {
+.project-title p, .client-title p {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+}
+
+.project-overview h3, .skills-used h3, .date h3 {
     font-size: 0.9rem;
     font-weight: bold;
-    margin-top: 1rem;
+    margin-bottom: 0.5rem;
 }
 
-.project-info p, .client-info p, .client-info ul {
+.project-overview p, .skills-used ul, .date p {
     font-size: 1rem;
     margin-top: 0.5rem;
 }
 
-.client-info ul {
-    list-style-type: none;
+.skills-used ul {
+    list-style: none;
     padding-left: 0;
 }
 
-.client-info ul li {
+.skills-used ul li {
     margin-bottom: 0.3rem;
 }
