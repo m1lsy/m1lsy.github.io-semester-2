@@ -81,7 +81,20 @@ button .arrow {
     grid-row: 3;
 }
 
+.quote {
+    grid-column: 3 / span 5;
+    grid-row: 3;
+}
 
+.quote-source {
+    grid-column: 6 / span 5;
+    grid-row: 4;
+}
+
+.iteration-title {
+    grid-column: 2 / span 3;
+    grid-row: 3;
+}
 
 /* Additional Styling */
 .project-title h1, .client-title h2 {
@@ -90,21 +103,30 @@ button .arrow {
     margin-bottom: 0.5rem;
 }
 
-.project-title p, .client-title p {
+.project-title p, .client-title p, .teration-title p {
     font-size: 2rem;
     margin-bottom: 1.5rem;
     font-weight: 500;
 }
 
-.project-overview h3, .skills-used h3, .date h3 {
+.project-overview h3, .skills-used h3, .date h3, .iteration-title h3 {
     font-size: 0.9rem;
     font-weight: 600;
     margin-bottom: 0.5rem;
+    text-transform: uppercase;
 }
 
 .project-overview p, .skills-used ul, .date p {
     font-size: 1rem;
     margin-top: 0.5rem;
+}
+
+.quote-container p {
+    font-size: 2rem;
+}
+.quote-container h4 {
+    font-weight: 300;
+    font-size: 1rem;
 }
 
 .skills-used ul {
