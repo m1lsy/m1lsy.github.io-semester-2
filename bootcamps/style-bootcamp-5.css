@@ -1,0 +1,73 @@
+
+.shapes {
+    text-align: center;
+    position: relative;
+    justify-content: center;
+    padding-left: 500px;
+    padding-top: 250px;
+    animation: floating 4s ease-in-out infinite; 
+}
+
+.rectangle-1 {
+    width: 50px;
+    height: 200px;
+    background: #F3AC3C;
+    position: relative;
+    transform: rotate(-45deg) translate(90px, 150px);
+    transition: transform 0.6s ease-in-out, background 0.6s ease;
+}
+  
+.rectangle-2 {
+    width: 50px;
+    height: 200px;
+    background: #A3A368;
+    transform: rotate(90deg);
+    position:absolute;
+    overflow: hidden;
+    transition: transform 0.6s ease-in-out, background 0.6s ease;
+}
+
+#overlap {
+  width: 50px;
+  height: 50px;
+  background: #FBE18C;
+  position: relative;
+  top: 75px;
+  animation: pulse 2s infinite alternate; 
+    transition: background 0.6s ease;
+}
+
+.shapes:hover .rectangle-1 {
+    transform: rotate(-45deg) translate(70px, 140px) scale(1.1); 
+    background: #FF7043; 
+}
+
+.shapes:hover .rectangle-2 {
+    transform: rotate(90deg) translate(50px, 50px) scale(1.1); 
+    background: #8BC34A; 
+}
+
+.shapes:hover #overlap {
+    background: #FFD54F; 
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1.2);
+    }
+}
+
+@keyframes floating {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-15px); 
+    }
+    100% {
+        transform: translateY(0);
+    }
+}

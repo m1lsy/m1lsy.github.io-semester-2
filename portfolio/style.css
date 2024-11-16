@@ -1,0 +1,232 @@
+/* Reset styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+}
+
+body {
+    font-family: polysans;
+    background-color: #FAF8F0;
+    cursor: none;
+}
+
+button {
+    background-color: #E1F673;
+    border: none;
+    width: 315px;
+    padding: 10px;
+    padding-left: 30px ;
+    margin-top: 20px;
+    border-radius: 50px;
+    text-align: left;
+}
+button .arrow {
+    margin-left: 150px; 
+}
+.circle-cursor {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: #212ae7; 
+    border-radius: 50%; 
+    pointer-events: none; 
+    transform: translate(-50%, -50%); 
+    transition: width 0.1s ease, height 0.1s ease; 
+    pointer-events: none; /* Ensures the custom cursor doesn't interfere with mouse interactions */
+}
+/* Grid Container */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr); /* 8 columns */
+    grid-auto-rows: minmax(100px, auto); /* Automatic row height */
+    gap: 40px; /* 40px gutter */
+    padding: 0 25px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Grid Items */
+.project-title {
+    grid-column: 2 / span 4; /* Start in column 2, go across 4 columns */
+    grid-row: 2; 
+}
+
+.client-title {
+    grid-column: 6 / span 4; 
+    grid-row: 3; 
+}
+
+.project-overview {
+    grid-column: 2 / span 3; 
+    grid-row: 5; 
+}
+
+.skills-used {
+    grid-column: 6 / span 2; 
+    grid-row: 5; 
+}
+
+.date {
+    grid-column: 8 / span 2; 
+    grid-row: 5; 
+}
+
+.aside-heading {
+    grid-column: 2 / span 2;
+    grid-row: 3;
+}
+
+.aside-text {
+    grid-column: 5 / span 4;
+    grid-row: 3;
+}
+
+.quote {
+    grid-column: 3 / span 5;
+    grid-row: 3;
+}
+
+.quote-source {
+    grid-column: 6 / span 5;
+    grid-row: 4;
+}
+
+.iteration-title {
+    grid-column: 2 / span 3;
+    grid-row: 3;
+    margin-top: 50px;
+}
+
+.process-heading {
+    grid-column: 3 / span 3;
+    grid-row: 2;
+}
+
+.process-text {
+    grid-column: 3 / span 4;
+    grid-row: 3;
+}
+
+.grid-container .progress-container {
+    display: grid;
+    grid-template-rows: 5px;
+}
+
+.block-heading {
+    grid-column: 2 / span 3;
+    padding: 100px;
+}
+.block-item {
+    grid-column: 2 / span 3;
+}
+
+.block-item:nth-child(even) {
+    grid-column: 5 / span 3; /* Alternate layout for even items */
+}
+
+.block-information {
+    margin-top: 100px;
+}
+/* Additional Styling */
+.project-title h1, .client-title h2 {
+    font-size: 2.5em;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.project-title p, .client-title p, .teration-title p {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    font-weight: 500;
+}
+
+.project-overview h3, .skills-used h3, .date h3, .iteration-title h3 {
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+}
+
+.project-overview p, .skills-used ul, .date p {
+    font-size: 1rem;
+    margin-top: 0.5rem;
+}
+
+.quote-container p {
+    font-size: 2rem;
+}
+.quote-container h4 {
+    font-weight: 300;
+    font-size: 1rem;
+}
+
+.skills-used ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.skills-used ul li {
+    margin-bottom: 0.3rem;
+}
+
+.aside-heading h1 {
+    text-transform: uppercase;
+    font-size: 1.2em;
+}
+
+.image-container img{
+    grid-column: 3 / span 3;
+    grid-row: 2;
+    border-radius: 10px;
+}
+
+.process-heading h1 {
+    margin-bottom: 0.1rem; 
+}
+
+.process-text p {
+    font-size: 1.2rem;
+    margin-top: 0.1rem; 
+}
+
+.block-item h4 {
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.block-item p {
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+/* Slider */
+
+.slider {
+    grid-column: 4 / span 5; 
+    grid-row: 3; 
+    position: relative;
+    height: 200px; 
+    overflow: hidden; 
+}
+
+.slider-inner {
+    position: relative;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(11, 1fr); /* Adjust as necessary for your slides */
+    gap: 5px;
+    transform: translateX(0); /* Ensure it starts from the first slide */
+}
+
+
+.slide-image {
+    height: 100%;
+    padding: 3rem;
+}
