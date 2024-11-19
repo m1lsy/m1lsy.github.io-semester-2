@@ -1,4 +1,3 @@
-
 // Create the circle cursor element
 const cursor = document.createElement('div');
 cursor.classList.add('circle-cursor');
@@ -67,3 +66,11 @@ document.addEventListener('mousemove', (e) => {
     cursor.style.top = `${e.pageY}px`;
   }
 });
+
+// three js
+import * as THREE from 'three';
+
+console.log('Three.js version:', THREE.REVISION);
+
+const scene = new THREE.Scene();
+console.log('Scene created:', scene);

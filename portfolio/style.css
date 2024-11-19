@@ -1,4 +1,4 @@
-/* Reset styling */
+
 * {
     margin: 0;
     padding: 0;
@@ -79,6 +79,7 @@ button .arrow {
 .aside-heading {
     grid-column: 2 / span 2;
     grid-row: 3;
+    margin-top: 10px;
 }
 
 .aside-text {
@@ -179,11 +180,6 @@ button .arrow {
     font-size: 1.2em;
 }
 
-.image-container img{
-    grid-column: 3 / span 3;
-    grid-row: 2;
-    border-radius: 10px;
-}
 
 .process-heading h1 {
     margin-bottom: 0.1rem; 
@@ -220,13 +216,105 @@ button .arrow {
     position: relative;
     height: 100%;
     display: grid;
-    grid-template-columns: repeat(11, 1fr); /* Adjust as necessary for your slides */
+    grid-template-columns: repeat(11, 1fr); 
     gap: 5px;
     transform: translateX(0); /* Ensure it starts from the first slide */
 }
 
 
-.slide-image {
+.slider-image img{
     height: 100%;
-    padding: 3rem;
+    border-radius: 5%;
+    padding: 10px;
+}
+
+/* image styling */
+.image-container {
+    display: grid;
+    place-items: center; 
+    max-width: 100%;     
+    overflow: hidden;   
+    padding: 10px; 
+    margin-top: 300px;       
+}
+
+.image-container img {
+    max-width: 100%;      
+    height: auto;         
+    object-fit: cover;    /* Ensure the image covers the area of its container */
+}
+
+
+canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1; /* Make sure it's behind content */
+    width: 100%;
+    height: 100%;
+}
+
+
+/* responsive things */
+@media (max-width: 480px) {
+    /* Grid Layout Adjustments */
+    .grid-container {
+        grid-template-columns: 1fr; /* Stack the grid items */
+        padding: 0 10px;
+    }
+
+    button {
+        width: 100%;
+        padding: 10px 20px;
+    }
+
+    .project-title h1, .client-title h2 {
+        font-size: 1.8rem;
+    }
+
+    .project-title p, .client-title p {
+        font-size: 1.4rem;
+    }
+
+    .quote-container p {
+        font-size: 1.6rem;
+    }
+
+    .quote-container h4 {
+        font-size: 0.9rem;
+    }
+
+    .skills-used ul li {
+        font-size: 0.9rem;
+    }
+
+    .process-text p {
+        font-size: 1rem;
+    }
+}
+@media (max-width: 768px) {
+    .grid-container {
+        grid-template-columns: repeat(2, 1fr); /* Two columns for tablets */
+    }
+
+    .project-title h1, .client-title h2 {
+        font-size: 2rem;
+    }
+
+    .project-title p, .client-title p {
+        font-size: 1.6rem;
+    }
+
+    .quote-container p {
+        font-size: 1.8rem;
+    }
+
+    .quote-container h4 {
+        font-size: 1rem;
+    }
+
+    /* Adjust the button size */
+    button {
+        width: 100%;
+    }
 }
