@@ -13,8 +13,6 @@ body {
     background-color: #FAF8F0;
     cursor: none;
 }
-/* Basic reset for the nav and body */
-
 
 header {
     position: absolute;  /* Remove the navbar from normal flow */
@@ -35,19 +33,19 @@ nav ul li {
 
 nav ul li a {
     color: #333;
-    text-decoration: none; /* Remove underline */
+    text-decoration: none; 
     font-size: 0.9rem;
-    border-radius: 25px; /* Rounded corners for normal state */
-    padding: 15px 25px; /* Add padding for enough clickable area */
-    position: relative; /* Allows us to add the background effect */
+    border-radius: 25px; 
+    padding: 10px 30px; 
+    position: relative; /* Allows background effect */
     display: inline-block;
     transition: background-color 0.3s ease, border-radius 0.3s ease;
 }
 
 /* Hover effect */
 nav ul li a:hover {
-    background-color: #E1F673; /* Change background color on hover */
-    border-radius: 25px; /* Keep the same rounded corners on hover */
+    background-color: #E1F673; 
+    border-radius: 25px; 
 }
 
 
@@ -86,10 +84,10 @@ button .arrow {
     height: 10px;
     background-color: #212ae7; 
     border-radius: 50%; 
-    pointer-events: none; 
     transform: translate(-50%, -50%); 
     transition: width 0.1s ease, height 0.1s ease; 
     pointer-events: none; /* Ensures the custom cursor doesn't interfere with mouse interactions */
+    z-index: 9999;
 }
 /* Grid Container */
 .grid-container {
@@ -111,6 +109,57 @@ button .arrow {
     margin: 0;
 }
 
+/* Palette grid styling */
+.palette-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 columns */
+    gap: 40px; /* Space between grid items */
+    padding: 40px 0; /* Add some vertical spacing */
+    max-width: 800px; /* Optional: Constrain grid width */
+    margin: 0 auto; /* Center the grid */
+}
+
+.palette-option img {
+    width: 90%; /* Make images responsive */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.palette-option {
+    position: relative;
+    width: 100%; /* Ensure the container scales with the grid */
+    overflow: hidden;
+}
+
+.default-image {
+    display: block;
+    width: 100%;
+    transition: opacity 0.3s ease;
+}
+
+.hover-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    z-index: 1;
+}
+
+/* Add hover effects */
+.palette-option:hover .default-image {
+    opacity: 0; /* Hide the default image */
+}
+
+.palette-option:hover .hover-image {
+    opacity: 1; /* Show the hover image */
+}
+
+.hover-image,
+.palette-option::after {
+    pointer-events: none; /* Prevent these elements from blocking the custom cursor */
+}
+
 /* Grid Items */
 .project-title {
     grid-column: 2 / span 4; /* Start in column 2, go across 4 columns */
@@ -118,7 +167,7 @@ button .arrow {
 }
 
 .client-title {
-    grid-column: 6 / span 4; 
+    grid-column: 6 / span 3; 
     grid-row: 3; 
 }
 
@@ -133,7 +182,7 @@ button .arrow {
 }
 
 .date {
-    grid-column: 8 / span 2; 
+    grid-column: 7 / span 2; 
     grid-row: 5; 
 }
 
@@ -213,8 +262,44 @@ button .arrow {
     font-size: 60px;
 }
 
+.word {
+    font-size: 1.5rem; 
+    font-weight: bold;
+    color: #000; 
+}
+
+.word:hover {
+    color: #212ae7;
+    transform: translateY(-10px); /* Moves the word slightly upward */
+    transition: transform 0.3s ease; 
+}
+
+/* Positioning the words */
+.word1 {
+    grid-column: 2 / 3; /* Column 2 */
+    grid-row: 2;        /* Row 1 */
+}
+
+.word2 {
+    grid-column: 3 / 4; /* Column 3 */
+    grid-row: 3;        /* Row 2 */
+}
+
+.word3 {
+    grid-column: 4 / 5; /* Column 4 */
+    grid-row: 4;        /* Row 3 */
+}
+
+.word4 {
+    grid-column: 5 / span 2; /* Column 5 */
+    grid-row: 5;        /* Row 4 */
+}
+
 /* Additional Styling */
 
+p {
+    text-align: justify;
+}
 
 .hero-page p {
     margin: 0;
@@ -270,7 +355,11 @@ button .arrow {
     text-transform: uppercase;
     font-size: 1.2em;
 }
-
+.aside-heading:hover {
+    color: #212ae7;
+    transform: translateY(-10px); /* Moves the word slightly upward */
+    transition: transform 0.3s ease; 
+}
 
 .process-heading h1 {
     margin-bottom: 0.1rem; 
