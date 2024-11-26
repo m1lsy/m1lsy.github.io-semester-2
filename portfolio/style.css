@@ -1,11 +1,11 @@
-* {
+
+
+html, body{
+    font-size: 16px;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
-
-html {
-    font-size: 16px;
+    height: 100%;
 }
 
 body {
@@ -13,6 +13,43 @@ body {
     background-color: #FAF8F0;
     cursor: none;
 }
+/* Basic reset for the nav and body */
+
+
+header {
+    position: absolute;  /* Remove the navbar from normal flow */
+    top: 0;
+    right: 0; /* Align the navbar to the top-right corner */
+    padding: 10px 20px;
+}
+
+nav ul {
+    display: flex; /* Arrange the list items horizontally */
+    justify-content: flex-end; /* Align the items to the right */
+    list-style-type: none; /* Remove bullet points */
+}
+
+nav ul li {
+    margin: 0 15px; /* Space out the links */
+}
+
+nav ul li a {
+    color: #333;
+    text-decoration: none; /* Remove underline */
+    font-size: 0.9rem;
+    border-radius: 25px; /* Rounded corners for normal state */
+    padding: 15px 25px; /* Add padding for enough clickable area */
+    position: relative; /* Allows us to add the background effect */
+    display: inline-block;
+    transition: background-color 0.3s ease, border-radius 0.3s ease;
+}
+
+/* Hover effect */
+nav ul li a:hover {
+    background-color: #E1F673; /* Change background color on hover */
+    border-radius: 25px; /* Keep the same rounded corners on hover */
+}
+
 
 @font-face {
     font-family: 'PolySans';
@@ -60,9 +97,18 @@ button .arrow {
     grid-template-columns: repeat(8, 1fr); /* 8 columns */
     grid-auto-rows: minmax(100px, auto); /* Automatic row height */
     gap: 40px; /* 40px gutter */
-    padding: 0 25px;
+    padding: 0;
     max-width: 1200px;
     margin: 0 auto;
+
+}
+
+.grid-container.hero-page {
+    grid-template-rows: repeat(3, auto); /* Adjust row height for clarity */
+    align-items: center;
+    padding: 0px;
+    height: 100vh;
+    margin: 0;
 }
 
 /* Grid Items */
@@ -148,32 +194,35 @@ button .arrow {
 .block-information {
     margin-top: 100px;
 }
-.name-title {
-    grid-column: 3;
+.hero-text-left {
+    grid-column: 2 / span 3; /* Left column */
+    grid-row: 2; /* Place it in row 2 */
+    font-size: 40px;
 }
 
-.hero-text-left {
-    grid-column: 2 / span 3;
-    grid-row: 3;
+.hero-title {
+    grid-column: 2 / span 3; /* Align with hero-text-left */
+    grid-row: 3; /* Same row as hero-text-right */
+    padding: 0; /* Ensure no extra spacing */
 }
 
 .hero-text-right {
-    grid-column: 8 / span 2;
-    grid-row: 4;
-    margin-top: 50px;
+    grid-column: 8;
+    grid-row: 3; 
+    margin-top: 150px;
+    font-size: 60px;
 }
 
 /* Additional Styling */
 
-.hero-page p {
-    font-size: 2.5rem;
-}
 
-.hero-page h1{
-    font-size: 17rem;
-    grid-column: 2 / span 3;
-    grid-row: 4;
+.hero-page p {
+    margin: 0;
     padding: 0;
+}
+.hero-page h1{
+    font-size: 350px;
+    margin: 0;
 }
 
 .project-title h1, .client-title h2 {
@@ -244,9 +293,6 @@ button .arrow {
     line-height: 1.5;
 }
 
-.hero-text p {
-    font-size: 2rem;
-}
 /* Slider */
 
 .slider {
@@ -406,14 +452,14 @@ canvas {
 /* gradient */
 
 :root {
-    --color-bg1: #FFFFFF; /* Sleek white background */
+    --color-bg1: #FAF8F0; /* Sleek white background */
     --color-bg2: #F7F7F7; /* Slightly off-white for subtle depth */
     --color1: 225, 246, 115; /* Bright yellow-green */
     --color2: 18, 113, 255; /* Bright blue */
     --color3: 255, 105, 180; /* Hot pink */
-    --color4: 245, 230, 255; /* Neutral purple for balance */
+    --color4: 225, 246, 115; /* Neutral purple for balance */
     --color5: 255, 255, 255; /* Pure white to blend smoothly */
-    --color-interactive: 140, 100, 255; /* Interactive purple */
+    --color-interactive: 225, 246, 115; /* Interactive purple */
     --circle-size: 80%;
     --blending: soft-light; /* Softer blend for modern, polished feel */
   }
@@ -453,8 +499,7 @@ canvas {
     transform: translateX(-50%) translateY(-10%);
   }
 }
-
-.hero-page .gradient-bg {
+.gradient-bg {
     width: 100vw;
     height: 100vh;
     position: absolute; /* Keep it positioned at the background */
@@ -463,9 +508,11 @@ canvas {
     z-index: -1; /* Keep the gradient behind the content */
     background: linear-gradient(40deg, var(--color-bg1), var(--color-bg2));
     overflow: hidden;
+    
+    
   }
   
-  .hero-page .gradients-container {
+.gradients-container {
     filter: url(#goo) blur(40px);
     width: 100%;
     height: 100%;
