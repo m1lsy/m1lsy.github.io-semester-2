@@ -188,13 +188,13 @@ button .arrow {
 
 .aside-heading {
     grid-column: 2 / span 2;
-    grid-row: 3;
+    grid-row: 2;
     margin-top: 10px;
 }
 
 .aside-text {
     grid-column: 5 / span 4;
-    grid-row: 3;
+    grid-row: 2;
 }
 
 .quote {
@@ -229,8 +229,9 @@ button .arrow {
 }
 
 .block-heading {
-    grid-column: 2 / span 3;
-    padding: 100px;
+    grid-column: 2 / span 2;
+    text-transform: uppercase;
+    
 }
 .block-item {
     grid-column: 2 / span 3;
@@ -241,12 +242,17 @@ button .arrow {
 }
 
 .block-information {
-    margin-top: 100px;
+    margin-top: 150px;
+    align-items: center;
 }
 .hero-text-left {
     grid-column: 2 / span 3; /* Left column */
     grid-row: 2; /* Place it in row 2 */
     font-size: 40px;
+}
+
+.hero-text-left p {
+    text-align: left;
 }
 
 .hero-title {
@@ -372,7 +378,7 @@ p {
 
 .block-item h4 {
     font-size: 1.2rem;
-    margin-bottom: 5px;
+    margin: 0;
     text-transform: uppercase;
     font-weight: bold;
 }
@@ -380,6 +386,16 @@ p {
 .block-item p {
     font-size: 1rem;
     line-height: 1.5;
+}
+
+.stylescape-image {
+    max-width: 40%;
+    opacity: 0.7;
+    transition: opacity 0.3s ease; /* Smooth transition */
+}
+
+.stylescape-image:hover {
+    opacity: 1; /* Full opacity on hover */
 }
 
 /* Slider */
@@ -390,6 +406,7 @@ p {
     position: relative;
     height: 200px; 
     overflow: hidden; 
+    padding-bottom: 100px ;
 }
 
 .slider-inner {
@@ -410,40 +427,28 @@ p {
 
 /* image styling */
 .image-container {
-    display: grid;
-    place-items: center; 
-    max-width: 100%;     
-    overflow: hidden;   
-    padding: 10px; 
-    margin-top: 200px;       
-    place-items: center;
+    display: flex;
+    justify-content: center; /* Horizontally centers content */
+    align-items: center; /* Vertically centers content */
     max-width: 100%;
     overflow: hidden;
-    padding: 10px;
-    position: relative; /* Needed for positioning the pseudo element */
+    padding: 50px;
+    position: relative;
 }
 
 .image-container img {
-    max-width: 100%;      
-    height: auto;         
-    object-fit: cover;    /* Ensure the image covers the area of its container */
-    max-width: 100%;
-    height: auto;
-    object-fit: cover;
-    transition: transform 0.3s ease-out;
-    transform-origin: center bottom; /* Ensures scaling starts from the bottom */
+    width: 100%; /* Ensures the image fills the container */
+    height: auto; /* Maintains the aspect ratio */
+    object-fit: cover; /* Scales the image to fill its container while keeping proportions */
 }
-/* Apply a subtle effect on the bottom of the image */
-.image-container:before {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 30px; /* Control the height of the bottom section that will scale */
-    /* Remove the background gradient if it's not needed */
-    pointer-events: none; /* Ensures it doesn't block any mouse events */
-}
+
+
+.image-aside {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+  }
 
 
 canvas {
