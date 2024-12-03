@@ -78,6 +78,50 @@ button {
 button .arrow {
     margin-left: 150px; 
 }
+
+/* Sidebar Style */
+.sidebar {
+    position: sticky; /* Keeps it fixed on the page */
+    top: 0;
+    left: 0;
+    height: 100%; /* Full height of the page */
+    width: 200px;
+    background-color: #FAFAFA;
+    padding: 20px;
+    box-sizing: border-box;
+    display: block;
+    z-index: 1000; /* Ensures it's above other content */
+}
+
+/* Hide the sidebar specifically when on the hero page */
+#hero-page .sidebar {
+    display: none;
+}
+
+#hero-page {
+    position: relative;
+    height: 100vh; /* Adjust based on the section size */
+}
+
+#hero-page .grid-container {
+    margin: 0;
+}
+
+
+/* Sidebar Links */
+.sidebar a {
+    display: block;
+    color: #000;
+    text-decoration: none;
+    margin-bottom: 10px;
+    font-size: 15px;
+}
+
+.sidebar a:hover {
+    color: #BADA55;
+}
+
+
 .circle-cursor {
     position: absolute;
     width: 10px;
@@ -89,6 +133,7 @@ button .arrow {
     pointer-events: none; /* Ensures the custom cursor doesn't interfere with mouse interactions */
     z-index: 9999;
 }
+
 /* Grid Container */
 .grid-container {
     display: grid;
@@ -101,13 +146,16 @@ button .arrow {
 
 }
 
-.grid-container.hero-page {
-    grid-template-rows: repeat(3, auto); /* Adjust row height for clarity */
-    align-items: center;
-    padding: 0px;
-    height: 100vh;
+.hero-grid {
     margin: 0;
+    display: grid;
+    grid-template-columns: repeat(8, 1fr); /* 8 columns */
+    grid-auto-rows: minmax(100px, auto); /* Automatic row height */
+    gap: 40px; /* 40px gutter */
+    padding: 0;
+    max-width: 1200px;
 }
+
 
 /* Palette grid styling */
 .palette-grid {
@@ -307,11 +355,11 @@ p {
     text-align: justify;
 }
 
-.hero-page p {
+#hero-page p {
     margin: 0;
     padding: 0;
 }
-.hero-page h1{
+#hero-page h1{
     font-size: 350px;
     margin: 0;
 }
@@ -602,6 +650,7 @@ canvas {
     z-index: -1; /* Keep the gradient behind the content */
     background: linear-gradient(40deg, var(--color-bg1), var(--color-bg2));
     overflow: hidden;
+    margin: 0;
     
     
   }
