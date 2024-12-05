@@ -8,39 +8,39 @@ html, body{
     height: 100%;
 }
 
+
 body {
     font-family: polysans;
     background-color: #FAF8F0;
     cursor: none;
 }
 
-header {
+/*header {
     position: absolute;  /* Remove the navbar from normal flow */
-    top: 0;
+    /*top: 0;
     right: 0; /* Align the navbar to the top-right corner */
-    padding: 10px 20px;
+    /*padding: 10px 20px;
 }
-
 nav ul {
     display: flex; /* Arrange the list items horizontally */
-    justify-content: flex-end; /* Align the items to the right */
-    list-style-type: none; /* Remove bullet points */
-}
+    /*justify-content: flex-end; /* Align the items to the right */
+    /*list-style-type: none; /* Remove bullet points */
+/*}
 
 nav ul li {
     margin: 0 15px; /* Space out the links */
-}
 
-nav ul li a {
+
+/*nav ul li a {
     color: #333;
     text-decoration: none; 
     font-size: 0.9rem;
     border-radius: 25px; 
     padding: 10px 30px; 
     position: relative; /* Allows background effect */
-    display: inline-block;
+    /*display: inline-block;
     transition: background-color 0.3s ease, border-radius 0.3s ease;
-}
+} */
 
 /* Hover effect */
 nav ul li a:hover {
@@ -66,7 +66,8 @@ nav ul li a:hover {
     font-style: normal;
 }
 button {
-    background-color: #E1F673;
+    background-color: #212ae7;
+    color: #FAF8F0;
     border: none;
     width: 315px;
     padding: 10px;
@@ -80,18 +81,34 @@ button .arrow {
 }
 
 /* Sidebar Style */
+
 .sidebar {
-    position: sticky; /* Keeps it fixed on the page */
+    position: fixed; /* Makes the sidebar fixed when visible */
     top: 0;
     left: 0;
-    height: 100%; /* Full height of the page */
-    width: 200px;
-    background-color: #FAFAFA;
+    height: 100%; /* Full viewport height */
+    width: 200px; /* Sidebar width */
+    background-color: #ffffff       ;
     padding: 20px;
     box-sizing: border-box;
-    display: block;
-    z-index: 1000; /* Ensures it's above other content */
+    display: flex; /* Enables flexbox layout */
+    flex-direction: column; /* Align items vertically */
+    justify-content: center; /* Center the items vertically */
+    z-index: 1000; /* Keeps it above content */
 }
+.index .sidebar {
+    opacity: 0; /* Hidden initially */
+    transform: translateX(-100%); /* Slide out of view */
+    transition: opacity 0.3s ease, transform 0.3s ease; /* Smooth appearance */
+}
+
+
+/* Sidebar: Visible */
+.show-sidebar .sidebar {
+    opacity: 1; /* Fully visible */
+    transform: translateX(0); /* Slide into view */
+}
+
 
 /* Hide the sidebar specifically when on the hero page */
 #hero-page .sidebar {
@@ -113,12 +130,12 @@ button .arrow {
     display: block;
     color: #000;
     text-decoration: none;
-    margin-bottom: 10px;
     font-size: 15px;
+    margin: 5px 0; /* Add spacing between links */
 }
 
 .sidebar a:hover {
-    color: #BADA55;
+    color: #212ae7;
 }
 
 
@@ -143,6 +160,7 @@ button .arrow {
     padding: 0;
     max-width: 1200px;
     margin: 0 auto;
+    margin-left: 200px;
 
 }
 
@@ -262,7 +280,7 @@ button .arrow {
 }
 
 .process-heading {
-    grid-column: 3 / span 3;
+    grid-column: 3 / span 4;
     grid-row: 2;
 }
 
@@ -482,6 +500,7 @@ p {
     overflow: hidden;
     padding: 50px;
     position: relative;
+    margin-left: 200px;
 }
 
 .image-container img {

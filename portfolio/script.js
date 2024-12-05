@@ -82,3 +82,15 @@ document.addEventListener('mousemove', (e) => {
         //}
     //});
 //});
+
+window.addEventListener('scroll', function () {
+  const heroPage = document.getElementById('hero-page');
+  const sidebar = document.querySelector('.sidebar');
+  const heroBottom = heroPage.getBoundingClientRect().bottom;
+
+  if (heroBottom <= 0) {
+      document.body.classList.add('show-sidebar'); // Add class to show the sidebar
+  } else {
+      document.body.classList.remove('show-sidebar'); // Remove class to hide the sidebar
+  }
+});
