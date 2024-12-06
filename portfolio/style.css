@@ -77,7 +77,7 @@ button {
     text-align: left;
 }
 button .arrow {
-    margin-left: 150px; 
+    margin-left: 140px; 
 }
 
 /* Sidebar Style */
@@ -369,6 +369,9 @@ button .arrow {
 
 /* Additional Styling */
 
+.highlight {
+    color: #212ae7;
+}
 p {
     text-align: justify;
 }
@@ -392,6 +395,7 @@ p {
     font-size: 2rem;
     margin-bottom: 1.5rem;
     font-weight: 500;
+    text-align: left;
 }
 
 .project-overview h3, .skills-used h3, .date h3, .iteration-title h3 {

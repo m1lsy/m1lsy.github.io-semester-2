@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prototypes for Development project</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="sidebar">
+        <a href="#project-page-1">PROJECT 1 &#8599</a>
+        <a href="#project-page-2">PROJECT 2 &#8599</a>
+        <a href="#project-page-3">PROJECT 3 &#8599</a>
+        <a href="index.html#project-page-4">PROJECT 4 &#8599</a>
+        <a href="#project-page-portfolio">PORTFOLIO <br>CREATION &#8599</a>
+        <a href="LO5.html">PERSONAL <br>PROJECTS &#8599</a>
+        <br><br>
+        <a href="learning-outcomes.html">LEARNING <br>OUTCOMES &#8599</a>
+        <br><br>
+        <a href="LO5.html">ABOUT ME &#8599</a>
+    </div>
+    <main id="content">
+        <section class="grid-container aside-container">
+            <div class="aside-heading">
+                <h1>Prototype One</h1>
+            </div>
+            <div class="aside-text">
+                <p>We started off by splitting tasks in order to speed up the process. Yurick focused on getting the recording function to work while I created the canvas and focused on getting the charcters to move around with keys on the keyboard. </p>
+                <p>I started by creating a basic prototype to serve as a proof of concept for our idea. I did this by creating a canvas with two shapes that could move around with the arrow keys. I created two separate elements, a blue square to represent the sprite with an closed mouth and a red circle to represent the mouth open. Then Yurick added the recording function and we went to Stan and Maikel for feedback.</p>
+                <a href="prototype-4.html">
+                    <button>Prototype One 
+                        <span class="arrow">&#8599;</span>
+                    </button>
+                </a>
+            </div>
+        </section>
+        <section class="grid-container block-information">
+            <div class="block-heading">
+                <h1>Explaining my code</h1>
+            </div>
+            <div class="block-item">
+                <h4>Canvas API for Animation</h4>
+                <p>CANVAS SETUP: The setupCanvas method uses the Canvas API <span class="highlight">(getContext('2d'))</span> to enable 2D drawing and animations.</p>
+                <p>DRAWING AND ANIMATION: Shapes (square and circle) are dynamically rendered based on the state <span class="highlight">(showSquare)</span>. Smooth animation is achieved using the <span class="highlight">requestAnimationFrame</span> in gameLoop.</p>
+                <p>DYNAMIC BEHAVIOR: Shapes change dynamically between square and circle depending on the space bar press/release (keydown and keyup). Arrow keys control the movement of the shape across the canvas.</p>
+            </div>
+            <div class="block-item">
+                <h4>Shape Rendering</h4>
+                <p>SHAPE RENDERING: The square and circle share properties like position and speed, emphasizing reusability.</p>
+                <p>SWITCHING SHAPES: The <span class="highlight">showSquare</span> variable determines whether to draw a square <span class="highlight">(fillRect)</span> or a circle <span class="highlight">(arc)</span>.</p>
+                <p>BOUNDRY CONTROL: The update function prevents shapes from moving outside the canvas, using Math.max and Math.min</p>
+            </div>
+            <div class="block-item">
+                <h4>Key press handling</h4>
+                <p>STAGE MANAGMENT WITH KEYS: The <span class="highlight">keys</span> object tracks which keys are currently pressed.</p>
+                <p>RESPONSIVE MOVEMENT: Arrow keys adjust the position of the shapes in real-time, providing smooth control.</p>
+                
+            </div>
+        </section>
+        <section class="grid-container quote-container">
+            <div class="quote">
+                <p>“This is a really cool idea and I am very happy that you made a a fully working, prototype. It is impressive that you got the recording function to work. Next, I want you to add in the images of the sprites and make another prototype iteration.” </p>
+            </div>
+            <div class="quote-source">
+                <h4>-Stan</h4>
+            </div>
+        </section>
+        <section class="grid-container aside-container">
+            <div class="aside-heading">
+                <h1>Prototype Two</h1>
+            </div>
+            <div class="aside-text">
+                <p>In the next prototype, we took Stans advice and replaced our shapes with the sprite images. This gave us a better idea as to what the final app would look like as this allowed us to interact with the actual sprite character. Much of the code was similar to prototype one, only changed to work for the images and not the shape elements. </p>
+                <a href="prototype-4.html">
+                    <button>Prototype Two 
+                        <span class="arrow">&#8599;</span>
+                    </button>
+                </a>
+            </div>
+        </section>
+        <section class="grid-container block-information">
+            <div class="block-heading">
+                <h1>Explaining My Code</h1>
+            </div>
+            <div class="block-item">
+                <h4>Replacing Canvas-Drawn Shapes with Images</h4>
+                <p>The previous implementation dynamically drew shapes (a square and a circle) on the canvas using <span class="highlight">ctx.fillRect</span> and <span class="highlight">ctx.arc</span>. This version replaces the shapes with external image assets (<span class="highlight">plus-all-open.png </span> and <span class="highlight">plus-eyes-open.png)</span>.</p>
+                <p>Images are loaded using the <span class="highlight">Image()</span> constructor.</p>
+                <p><span class="highlight">ctx.drawImage()</span> is used to render these images on the canvas.</p>
+            </div>
+            <div class="block-item">
+                <h4>Event-Driven Shape (Image) Switching</h4>
+                <p>OLD APPROACH: Shape switching was managed using a boolean variable <span class="highlight">(showSquare)</span> and keyboard events to determine whether to draw a square or circle.</p>
+                <p>NEW APPROACH: This behavior remains largely the same, but the rendered shapes are now replaced by corresponding images (<span class="highlight">img1</span> for square, <span class="highlight">img2</span> for circle).</p>
+                <p>KEY CONCEPTS: <span class="highlight">keydown</span> and <span class="highlight">keyup</span> events still toggle <span class="highlight">showSquare</span> based on whether the space bar is pressed or released.</p>
+                <p>The state of <span class="highlight">showSquare</span> determines which image is drawn using <span class="highlight">ctx.drawImage</span>.</p>
+            </div>
+            <div class="block-item">
+                <h4>Image Position and Boundary Control</h4>
+                <p>SHARED POSITION OBJECT: Similar to the previous implementation, both images share the same position (<span class="highlight">position.x</span> and <span class="highlight">position.y</span>).</p>
+                <p>BOUNDRY LOGIC: The update function ensures that the images cannot move outside the canvas.</p>
+                <p>Boundary logic has been adjusted to account for the image dimensions (e.g., <span class="highlight">img1Width</span> and <span class="highlight">img2Height</span>), which replace the square size or circle radius used in the previous version.</p>
+            </div>
+        </section>
+        <section class="grid-container aside-container">
+            <div class="aside-heading">
+                <h1>Prototype THREE</h1>
+            </div>
+            <div class="aside-text">
+                <p>Next, we worked on creating our final prototype which allowed the user to toggle between the two characters (Plusa and Minnie) using the 'P' and 'M' keys, allowed for the user to control the size and movement of the character and also incorporated blinking to occur every few seconds. After we created this prototype, we seeked feedback ftom Maikel on our code and Anke and Jo-An on our prototype iteration process.  </p>
+                <a href="prototype-4.html">
+                    <button>Prototype Three 
+                        <span class="arrow">&#8599;</span>
+                    </button>
+                </a>
+            </div>
+        </section>
+        <section class="grid-container block-information">
+            <div class="block-heading">
+                <h1>Explaining my code</h1>
+            </div>
+            <div class="block-item">
+                <h4>ADVANCED CANVAS ANIMATION</h4>
+                <p>DYNAMIC SPRITE SYSTEM: A spritesheet-like system is implemented for character animation.<span class="highlight"> sprites</span> is an object containing preloaded image assets for different character states (open/closed mouth, blinking, and character toggle). </p>
+                <p><span class="highlight">getSprite()</span> determines the appropriate sprite to render based on the states <span class="highlight">open, blink</span> and <span class="highlight">charToggle</span>.</p>
+                <p>BLINKING MECHANISM: Uses <span class="highlight">setInterval</span> and <span class="highlight">setTimeout</span>to toggle blinking every 2.6 seconds for a short duration (100ms). Adds realism by automating character behavior.</p>
+                <p>Updates are handled through an  <span class="highlight">update()</span> unction, ensuring smooth transitions.</p>
+            </div>
+            <div class="block-item">
+                <p>MOVEMENT AND SIZING: Characters can move with <span class="highlight">WASD</span> keys, resize with the arrow keys, and toggle characters with <span class="highlight">P</span> and <span class="highlight">M</span>.</p>
+                <p>CANVAS RENDERING: The <span class="highlight">draw()</span> function ensures the correct sprite is drawn based on the character's position, size, and current state. Offset calculations (<span class="highlight">position.x - offset</span>,etc.) ensure the sprite is centered on the canvas.</p>
+            </div>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
