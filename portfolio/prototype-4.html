@@ -27,7 +27,7 @@
             <div class="aside-text">
                 <p>We started off by splitting tasks in order to speed up the process. Yurick focused on getting the recording function to work while I created the canvas and focused on getting the charcters to move around with keys on the keyboard. </p>
                 <p>I started by creating a basic prototype to serve as a proof of concept for our idea. I did this by creating a canvas with two shapes that could move around with the arrow keys. I created two separate elements, a blue square to represent the sprite with an closed mouth and a red circle to represent the mouth open. Then Yurick added the recording function and we went to Stan and Maikel for feedback.</p>
-                <a href="prototype-4.html">
+                <a href="dev-project/prototype-1/index.html" target="_blank" >
                     <button>Prototype One 
                         <span class="arrow">&#8599;</span>
                     </button>
@@ -71,7 +71,7 @@
             </div>
             <div class="aside-text">
                 <p>In the next prototype, we took Stans advice and replaced our shapes with the sprite images. This gave us a better idea as to what the final app would look like as this allowed us to interact with the actual sprite character. Much of the code was similar to prototype one, only changed to work for the images and not the shape elements. </p>
-                <a href="prototype-4.html">
+                <a href="dev-project/prototype-2/index.html" target="_blank" >
                     <button>Prototype Two 
                         <span class="arrow">&#8599;</span>
                     </button>
@@ -107,12 +107,20 @@
                 <h1>Prototype THREE</h1>
             </div>
             <div class="aside-text">
-                <p>Next, we worked on creating our final prototype which allowed the user to toggle between the two characters (Plusa and Minnie) using the 'P' and 'M' keys, allowed for the user to control the size and movement of the character and also incorporated blinking to occur every few seconds. After we created this prototype, we seeked feedback ftom Maikel on our code and Anke and Jo-An on our prototype iteration process.  </p>
-                <a href="prototype-4.html">
+                <p>Next, we worked on creating our final prototype which allowed the user to toggle between the two characters (Plusa and Minnie) using the 'P' and 'M' keys, allowed for the user to control the size and movement of the character and also incorporated blinking to occur every few seconds. After we created this prototype, we seeked feedback from Maikel on our code and Anke and Jo-An on our prototype iteration process.  </p>
+                <a href="dev-project/prototype-3/index.html" target="_blank" >
                     <button>Prototype Three 
                         <span class="arrow">&#8599;</span>
                     </button>
                 </a>
+            </div>
+        </section>
+        <section class="grid-container quote-container">
+            <div class="quote">
+                <p>"The variables are well named and the code is well structed with many comments, making it easy to read and understand. Some advice is to try using releases/tags on Git for Prototype versions later on."</p>
+            </div>
+            <div class="quote-source">
+                <h4>- Maikel</h4>
             </div>
         </section>
         <section class="grid-container block-information">
@@ -123,12 +131,26 @@
                 <h4>ADVANCED CANVAS ANIMATION</h4>
                 <p>DYNAMIC SPRITE SYSTEM: A spritesheet-like system is implemented for character animation.<span class="highlight"> sprites</span> is an object containing preloaded image assets for different character states (open/closed mouth, blinking, and character toggle). </p>
                 <p><span class="highlight">getSprite()</span> determines the appropriate sprite to render based on the states <span class="highlight">open, blink</span> and <span class="highlight">charToggle</span>.</p>
-                <p>BLINKING MECHANISM: Uses <span class="highlight">setInterval</span> and <span class="highlight">setTimeout</span>to toggle blinking every 2.6 seconds for a short duration (100ms). Adds realism by automating character behavior.</p>
+                <p>BLINKING MECHANISM: Uses <span class="highlight">setInterval</span> and <span class="highlight">setTimeout</span> to toggle blinking every 2.6 seconds for a short duration (100ms). Adds realism by automating character behavior.</p>
                 <p>Updates are handled through an  <span class="highlight">update()</span> unction, ensuring smooth transitions.</p>
             </div>
             <div class="block-item">
                 <p>MOVEMENT AND SIZING: Characters can move with <span class="highlight">WASD</span> keys, resize with the arrow keys, and toggle characters with <span class="highlight">P</span> and <span class="highlight">M</span>.</p>
                 <p>CANVAS RENDERING: The <span class="highlight">draw()</span> function ensures the correct sprite is drawn based on the character's position, size, and current state. Offset calculations (<span class="highlight">position.x - offset</span>,etc.) ensure the sprite is centered on the canvas.</p>
+            </div>
+            <div class="block-item">
+                <h4>Real-Time Updates</h4>
+                <p>The game loop is driven by the <span class="highlight">render()</span> method, which combines <span class="highlight">update()</span> and <span class="highlight">draw()</span> into a continuous rendering cycle using <span class="highlight">requestAnimationFrame</span>.</p>
+                <p>This ensures smooth, efficient rendering and animation.</p>
+                <p>The loop dynamically adjusts the canvas content as the user interacts with the character (movement, size, toggles).</p>
+            </div>
+        </section>
+        <section class="grid-container quote-container">
+            <div class="quote">
+                <p>"The progressive of iterations that you have is very good. My advice is to do some user testing with the target group (middle aged individuals) in order to see if they would understand how to use an app like this. I would also suggest adding a green screen feature to allow the background to be changed."</p>
+            </div>
+            <div class="quote-source">
+                <h4>- Jo-An</h4>
             </div>
         </section>
     </main>

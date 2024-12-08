@@ -80,6 +80,9 @@ button .arrow {
     margin-left: 140px; 
 }
 
+a {
+    text-decoration: none;
+}
 /* Sidebar Style */
 
 .sidebar {
@@ -309,7 +312,7 @@ button .arrow {
 
 .block-information {
     margin-top: 150px;
-    align-items: center;
+    
 }
 .hero-text-left {
     grid-column: 2 / span 3; /* Left column */
@@ -531,6 +534,9 @@ canvas {
     height: 100%;
 }
 
+i {
+    color: #212ae7;
+}
 
 /* responsive things */
 @media (max-width: 480px) {
