@@ -27,8 +27,8 @@ body {
     font-family: 'Poly Sans';
     src: url('PolySans-Median.woff2') format('woff2'),
          url('PolySans-Median.woff') format('woff');
-    font-weight: 400;
-    font-style: normal;
+    font-weight: 500;
+    font-style: bold;
 }
 /*@font-face {
     font-family: 'Poly Sans';
