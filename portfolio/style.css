@@ -127,6 +127,10 @@ a {
     margin: 0;
 }
 
+#phone-mockup {
+    grid-column: 2 / span 4; /* Start in column 2, go across 4 columns */
+    grid-row: 2;
+}
 
 /* Sidebar Links */
 .sidebar a {
@@ -523,8 +527,21 @@ p {
     align-items: center;
     gap: 40px;
   }
+  .image-grid {
+    display: grid; /* Makes the container a grid */
+    grid-template-columns: repeat(3, 1fr); /* Creates 3 equal-width columns */
+    gap: 10px; /* Adds spacing between images */
+    margin-left: 200px;
+}
 
+.image-grid img {
+    width: 100%; /* Ensures images fit within their grid cells */
+    height: auto; /* Maintains the aspect ratio */
+}
 
+video {
+    padding-bottom: 50px;
+}
 canvas {
     position: absolute;
     top: 0;
