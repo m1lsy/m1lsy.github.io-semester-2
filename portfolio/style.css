@@ -6,12 +6,11 @@ html, body{
     padding: 0;
     box-sizing: border-box;
     height: 100%;
-    font-family: 'Poly Sans', sans-serif; 
+    font-family: 'Poly Sans', sans-serif, inter
 }
 
 
 body {
-    font-family: polysans;
     background-color: #FAF8F0;
     cursor: none;
 }
