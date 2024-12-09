@@ -6,7 +6,7 @@ html, body{
     padding: 0;
     box-sizing: border-box;
     height: 100%;
-    font-family: 'Poly Sans', sans-serif;
+    font-family: 'Poly Sans', sans-serif; 
 }
 
 
@@ -23,15 +23,13 @@ body {
     font-weight: 400;
     font-style: normal;
 }
-
-@font-face {
+/*@font-face {
     font-family: 'Poly Sans';
     src: url('fonts/PolySans-Bold.woff2') format('woff2'),
          url('fonts/PolySans-Bold.woff') format('woff');
     font-weight: 700;
     font-style: normal;
-}
-
+}*/
 
 
 /*header {
