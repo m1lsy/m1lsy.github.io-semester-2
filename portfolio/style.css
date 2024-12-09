@@ -17,6 +17,14 @@ body {
 
 @font-face {
     font-family: 'Poly Sans';
+    src: url(':fonts/PolySans-Neutral\ \(1\).woff2') format('woff2'),
+         url(':fonts/PolySans-Neutral.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Poly Sans';
     src: url('PolySans-Median.woff2') format('woff2'),
          url('PolySans-Median.woff') format('woff');
     font-weight: 400;
