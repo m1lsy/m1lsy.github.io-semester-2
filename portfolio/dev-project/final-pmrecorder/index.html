@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PM Recorder - Prototype 3.0</title>
+    <link href="styles.css" rel="stylesheet" />
+    <script src="scripts.js" defer></script>
+</head>
+<body>
+    <main>
+        <div id="side-panel">
+            <!-- CONTROLS -->
+            <section id="controls">
+                <h3>PM Recorder Prototype 3.0</h3>       
+                <!-- Sprite Size -->
+                <label for="sprite-size">Sprite Size:</label>
+                <input type="range" id="sprite-size" min="50" max="2000" value="500">
+                <!-- Sprite Speed -->
+                <label for="sprite-speed">Sprite Speed:</label>
+                <input type="range" id="sprite-speed" min="1" max="50" value="5">
+                <!-- Background Color -->
+                <label for="bg-color">Background Color:</label>
+                <input type="color" id="bg-color" value="#fff"><br><br>
+                <!-- Character Swap -->
+                <input type="button" class="button" id="character-swap" value="Swap Character">
+            </section>
+            <!-- BUTTONS -->
+            <section id="buttons">
+                <!-- Record -->
+                <input type="button" class="button" data-select="record" value="Record">
+                <!-- Stop -->
+                <input type="button" class="button" data-select="stop" value="Stop">
+                <!-- Download -->
+                <a class="button" data-select="download">Download</a>
+                <!-- Reset -->
+                <input type="button" class="button" id="reset-button" value="Reset">
+            </section>
+            <!-- TUTORIAL -->
+            <section id="tutorial">
+                <p>Use the <b>Arrow Keys</b> to control the character.</p>
+                <p>Press and Hold the <b>M</b> key to open the character's mouth.</p>
+                <p>Click <b>Swap Characters</b> to swap between Plusa and Minnie.</p>
+                <p>Click the <b>Record</b> button to start recording, then click the <b>Stop</b> to stop.</p>
+                <p>When your recording is finished, used the <b>Download</b> button to download your recording.</p>
+                <p>Use the <b>Reset</b> button to start over.</p>
+            </section>
+        </div>
+        <!-- CANVAS -->
+        <div id="canvasContainer">
+            <canvas id="pmCanvas" data-component="pmrecorder"></canvas>
+        </div>
+    </main>
+</body>
+</html>

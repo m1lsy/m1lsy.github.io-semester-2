@@ -563,6 +563,22 @@ p {
     height: auto; /* Maintains the aspect ratio */
 }
 
+.character-container {
+    display: flex;
+    margin-left:200px ;
+    justify-content: center;
+    
+}
+.character-container img{
+    width: 300px;
+    height: auto;
+    filter: grayscale(100%);
+  transition: filter 0.3s ease;
+}
+
+.character-container img:hover {
+    filter: grayscale(0%);
+}
 video {
     padding-bottom: 50px;
 }
