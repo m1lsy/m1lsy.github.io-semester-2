@@ -156,6 +156,10 @@ a {
     grid-row: 2;
 }
 
+#content {
+    margin-left: 200px;
+}
+
 /* Sidebar Links */
 .sidebar a {
     display: block;
@@ -191,7 +195,7 @@ a {
     padding: 0;
     max-width: 1200px;
     margin: 0 auto;
-    margin-left: 200px;
+    
 
 }
 
@@ -535,7 +539,6 @@ p {
     overflow: hidden;
     padding: 50px;
     position: relative;
-    margin-left: 200px;
 }
 
 .image-container img {
@@ -555,7 +558,6 @@ p {
     display: grid; /* Makes the container a grid */
     grid-template-columns: repeat(3, 1fr); /* Creates 3 equal-width columns */
     gap: 10px; /* Adds spacing between images */
-    margin-left: 200px;
 }
 
 .image-grid img {
@@ -565,7 +567,6 @@ p {
 
 .character-container {
     display: flex;
-    margin-left:200px ;
     justify-content: center;
     
 }
