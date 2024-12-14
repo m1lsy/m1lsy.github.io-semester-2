@@ -420,6 +420,10 @@ p {
     margin: 0;
 }
 
+.citation {
+    font-size: 12px;
+}
+
 .project-title h1, .client-title h2 {
     font-size: 2.5em;
     font-weight: bold;
