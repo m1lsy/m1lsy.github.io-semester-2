@@ -4,8 +4,109 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bootcamps</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
+    <div class="sidebar">
+        <a href="index.html#project-page-1">PROJECT ONE &#8599</a>
+        <a href="index.html#project-page-2">PROJECT TWO &#8599</a>
+        <a href="index.html#project-page-3">PROJECT THREE &#8599</a>
+        <a href="index.html#project-page-4">PROJECT FOUR &#8599</a>
+        <a href="index.html#project-page-portfolio">PORTFOLIO <br>CREATION &#8599</a>
+        <a href="index.html#project-page-personal"><span class="highlight">PERSONAL <br>PROJECTS &#8599</span></a>
+        <br><br>
+        <a href="learning-outcomes.html">LEARNING <br>OUTCOMES &#8599</a>
+        <br><br>
+        <a href="about-me.html">ABOUT ME &#8599</a>
+    </div>
+    <main id="content">
+        <section class="grid-container process-container">
+            <div class="process-heading">
+                <h1>Bootcamps</h1>
+            </div>
+            <div class="process-text">
+                <p>During the semester, I chose to do some extra work and practice the concepts learnt in development lectures by doing these "bootcamp" excersises. I also made sure to show my bootcamps to Maikel and seek feedback to ensure I was doing things correctly and to show him my progress.</p>
+            </div>
+        </section>
+        <section class="grid-container aside-container">
+            <div class="aside-heading">
+                <h1>Development Bootcamp 1</h1>
+            </div>
+            <div class="aside-text">
+                <p>In the first development class of the semester, Maikel gave us a basic crash course on HTML, CSS and JavaScript. He sent us a JavaScript counter challenge to practice these skills we learnt in the lesson. After showing Maikel my challenge, I received the following feedback:</p>
+                <a href="/bootcamps/bootcamp-1.html" target="_blank"><span class="highlight">Project &#8599;</span></a>
+                <a href="https://github.com/m1lsy/Bootcamp-1" target="_blank"><span class="highlight">&nbsp &nbsp Git Repo &#8599;</span></a>
+            </div>
+        </section>
+        <section class="grid-container quote-container">
+            <div class="quote">
+                <p>"Works as expected, and the code is compact and well-written! Using a span instead of a div for the number would be more logical, and you could simplify with document.querySelector ("h1 span"). For spacing, consider CSS gap instead of the HTML code. Overall, great use of flexbox and JavaScript features—just remember to add comments for clarity as your code grows."</p>
+            </div>
+            <div class="quote-source">
+                <h7>- Maikel</h7>
+            </div>
+        </section>
+
+        <section class="grid-container aside-container">
+            <div class="aside-heading">
+                <h1>Development Bootcamp 2</h1>
+            </div>
+            <div class="aside-text">
+                <p>In the next crash course with Maikel, we dove deeper into semantic HTML and CSS. We learnt a lot about CSS grids and flexbox, which is something I typically battle with so it was very beneficial to me. For this weeks challenge, we were tasked with recreated a webpage which was given to us, concentrating on using semantic HTML and practicing CSS flexbox and grids. 
+                </p>
+                <a href="/bootcamps/bootcamp-3.html" target="_blank"><span class="highlight">Project &#8599;</span></a>
+                <a href="https://git.fhict.nl/I521945/dev-challange-3" target="_blank"><span class="highlight">&nbsp &nbsp Git Repo &#8599;</span></a>
+            </div>
+        </section>
+        <section class="grid-container quote-container">
+            <div class="quote">
+                <p>"Great use of semantic HTML and layout techniques! To refine, remove the default margin on the `ul` in the nav for better centering, and consider using a `ul>li` structure for the social media links. A separate section for the picture grid would improve reusability. For testimonials, the `figure` element works best as a container for the image with an optional `figcaption`. Your grid and flexbox usage is spot-on. To make images fit their grid cells, set their width to 100% and ensure consistent ratios. For the text overlay, positioning the box absolutely over the header image would simplify adjustments."</p>
+            </div>
+            <div class="quote-source">
+                <h7>- Maikel</h7>
+            </div>
+        </section>
+
+        <section class="grid-container aside-container">
+            <div class="aside-heading">
+                <h1>Development Bootcamp 3</h1>
+            </div>
+            <div class="aside-text">
+                <p>In the next crash course, we learnt about CSS animations. This is quite a new concept to me as I did not really attempt them last semester, however I am really interested in learning how to do them as I would like to implement them into my portfolio. For this weeks challenge, we were tasked with recreating something from 'CSS Battles' and adding animations to it. </p>
+
+                <p>I really enjoyed the first part of this challenge while trying to recreate the element given, and this part went well. However, I ran into some issues when trying to implement the animations. </p>
+                <a href="/bootcamps/bootcamp-5.html" target="_blank"><span class="highlight">Project &#8599;</span></a>
+            </div>
+            </section>  
+            <section class="grid-container quote-container">
+                <div class="quote">
+                    <p>"Great job with the animations and transitions—they're well done, and I love that you used unique transitions for each property! To improve, consider making the elements siblings instead of children to fix the growing overlap issue. For styling, using one class (e.g., .rectangle) with :nth-child(x) could simplify the CSS for similar rectangles. Also, using flexbox could help ensure the transition is triggered only on the cross area, not the larger block space." </p>
+                </div>
+                <div class="quote-source">
+                    <h7>- Maikel</h7>
+                </div>
+            </section>
+
+            <section class="grid-container aside-container">
+                <div class="aside-heading">
+                    <h1>
+                        Second attempt
+                    </h1>
+                </div>
+                <div class="aside-text">
+                    <p>I was not happy with the outcome of my challange so I decided to give this challenge a second attempt, this time using some of the feedback I got from Maikel. </p>
+                    <a href="/bootcamps/bootcamp-5.2.html" target="_blank"><span class="highlight">Project &#8599;</span></a>
+                </div>
+            </section>
+            <section class="grid-container quote-container">
+                <div class="quote">
+                    <p>"Nice improvements over the previous version! To fix the circle animation stopping when hovering over the crosses, you can either: Place the circle after the crosses in the HTML, give it a higher z-index, or set user-select: none on the crosses to prevent interaction. To enhance the animation, make it alternate between growing and shrinking by setting animation-iteration-count: infinite and animation-direction: alternate for a continuous effect." </p>
+                </div>
+                <div class="quote-source">
+                    <h7>- Maikel</h7>
+                </div>
+            </section>
+    </main>
+    <script src="script.js"></script>
 </body>
 </html>
