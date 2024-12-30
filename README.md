@@ -28,8 +28,8 @@ This portfolio highlights the various projects I completed during the second sem
 ---
 
 ### Project 4: Sprint X
-- **Description**: 
-- **Technologies Used**: 
+- **Description**: Developed a brand guide for wine bar Glou Glou, including logo, colour palltette. 
+- **Technologies Used**: Illustrator, Figma, Photoshop.
 ---
 
 ### Project 5: Portfolio Creation
