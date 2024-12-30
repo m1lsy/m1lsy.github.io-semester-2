@@ -94,3 +94,4 @@ window.addEventListener('scroll', function () {
       document.body.classList.remove('show-sidebar'); // Remove class to hide the sidebar
   }
 });
+
