@@ -94,6 +94,49 @@
                 <p>By conducting this test, I was able to refine the navigation system and ensure it met the needs of potential users, aligning with my goal of creating a functional and user-friendly portfolio.</p>
             </div>
         </section>
+        <section class="grid-container aside-container">
+            <div class="aside-heading">
+                <h1>Hero Page Gradient</h1>
+            </div>
+            <div class="aside-text">
+                <p>For my hero page, I wanted something that was eye catching and visually different to the rest of my portfolio, but still looked sleek. I decided to create a moving gradient affect with big blobs floating in the backfound. I followed a youtube tutorial by WeCoded and tweaked it to fit my aesthetic and needs. </p>
+                <a href="https://www.youtube.com/watch?v=Ml-B-W91gtw" target="_blank">
+                    <span class="highlight">Youtube Tutorial &#8599;</span>
+                </a>
+            </div>
+        </section>
+        <section class="grid-container block-information">
+            <div class="block-item">
+                <h4>HTML Sturcture</h4>
+                <p>1) <span class="highlight">.gradient-bg:</span> This is the main container for the background effect.</p>
+                <p>2) SVG Filter <span class="highlight">(goo)</span> Defines a "gooey effect" using a combination of:</p>
+                <p><span class="highlight">feGaussianBlur</span>: Applies a blur to the elements.</p>
+                <p><span class="highlight">feColorMatrix</span>: Modifies the color intensity and creates a "gooey" appearance by adjusting alpha values.</p>
+                <p><span class="highlight">feBlend</span>: Blends the blurred elements with the original content.</p>
+                <p>3) <span class="highlight">.gradients-container</span>: Contains multiple gradient circles (<span class="highlight">.g1</span> to <span class="highlight">.g5</span>) that will animate to create a fluid and dynamic background effect.
+                </p>
+            </div>
+            <div class="block-item">
+                <h4>CSS Styling</h4>
+                <p>1) The container applies the gooey filter (<span class="highlight">url(#goo)</span>) and an additional <span class="highlight">blur(40px)</span> for a smoother look. It spans the full width and height of the parent element.</p>
+                <p>2) The SVG is hidden since it’s only used to define the filter.</p>
+                <p>3) Each (<span class="highlight">.g1</span> to <span class="highlight">.g5</span>) represents a circular gradient blob with unique animations.</p>
+                <p>POSITIONING: The circles are centered using <span class="highlight">calc(50% - var(--circle-size) / 2)</span>.</p>
+                <p>RADIAL GRADIENTS: The <span class="highlight">mix-blend-mode</span> property ensures that the gradients blend creatively with each other and the background, creating unique visual effects.</p>
+                <p>OPACITY: Each circle has an opacity value to enhance blending and make the effect smoother.</p>
+            </div>
+            <div class="block-item">
+                <h4>Animation</h4>
+                <p>1) <span class="highlight">moveVertical</span>: Animates the gradient blobs vertically.</p>
+                <p>2) <span class="highlight">moveInCircle</span>: Rotates the blobs in a circular path.</p>
+                <p>3) <span class="highlight">moveHorizontal</span>: Animates the blobs horizontally.</p>
+                <p>4) The different durations (20s, 30s, etc.) and easing (ease, linear, etc.) create a fluid, asynchronous motion for the blobs, making the background feel dynamic.</p>
+                <p>View this code in my <a href="https://github.com/m1lsy/m1lsy.github.io-semester-2/blob/main/portfolio/style.css">
+                    <span class="highlight">repository &#8599;</span>
+                </a></p>
+            </div>
+            
+        </section>
         
     </main>
     <script src="script.js"></script>
